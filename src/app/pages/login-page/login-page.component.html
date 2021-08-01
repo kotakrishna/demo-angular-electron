@@ -1,0 +1,21 @@
+<mat-card class="login-container" align="center">
+    <mat-card-title align="center">Login Page</mat-card-title>
+
+    <mat-card-content class="content">
+        Enter Details to Login
+    </mat-card-content>
+    <mat-card-actions>
+        <form class="inputBox">
+
+            <!-- Form elements are here -->
+            <mat-form-field class="form-field">
+                <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+            </mat-form-field>
+            <mat-form-field class="form-field">
+                <input matInput placeholder="Password" [(ngModel)]="password" type="password" name="password" required>
+            </mat-form-field>
+
+            <button class="login" align="right" routerLink="/home" mat-raised-button color="primary">Login</button>
+        </form>
+    </mat-card-actions>
+</mat-card>

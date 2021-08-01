@@ -1,0 +1,66 @@
+
+
+// .container {
+//     width: 100%;
+//     height: 90vh;
+//     margin: 10px;
+//     border: 1px solid #555;
+
+//     .drawer{
+//         padding: 1% ;
+//         // width: 30%;
+//         min-width:300px ;
+//     }
+//     .content{
+
+//     }
+//   }
+
+
+:host {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  :host ::ng-deep .mat-tab-labels {
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  mat-tab-group {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  :host ::ng-deep .mat-tab-body-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  mat-tab-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  :host ::ng-deep mat-ink-bar {
+    display: none;
+  }
+  
+  /* Styles for the active tab label */
+  :host ::ng-deep.mat-tab-label.mat-tab-label-active {
+    background-color: transparent;
+    color: white;
+    background-color: grey;
+    border-right: 2px solid white;
+  }
+  /* Styles for the active tab label */
+  :host ::ng-deep.mat-tab-label {
+    background-color: transparent;
+    width:20%
+    /* background-color: lightgray; */
+  }
+  

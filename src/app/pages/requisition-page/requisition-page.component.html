@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<mat-tab-group [@.disabled]="true">
+    <mat-tab>
+        <ng-template mat-tab-label>
+            Home
+        </ng-template>
+        <div>
+            <app-input-page></app-input-page>
+        </div>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            Login
+        </ng-template>
+        Content 2
+        <app-input-page></app-input-page>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            <app-input-page></app-input-page>
+        </ng-template>
+        Content 3
+    </mat-tab>
+</mat-tab-group>
+<!-- <mat-tab-group>
+            <mat-tab label="First">
+                <ng-template matTabContent>
+                    Content 1 - Loaded: {{getTimeLoaded(1) | date:'medium'}}
+                </ng-template>
+            </mat-tab>
+            <mat-tab label="Second">
+                <ng-template matTabContent>
+                    Content 2 - Loaded: {{getTimeLoaded(2) | date:'medium'}}
+                </ng-template>
+            </mat-tab>
+            <mat-tab label="Third">
+                <ng-template matTabContent>
+                    Content 3 - Loaded: {{getTimeLoaded(3) | date:'medium'}}
+                </ng-template>
+            </mat-tab>
+        </mat-tab-group> -->
+
+
+<!-- <mat-drawer-content class="content">Main content<p>requisition-page works!</p>
+    </mat-drawer-content> -->

@@ -1,0 +1,126 @@
+<app-navbar></app-navbar>
+<mat-tab-group [@.disabled]="true">
+    <mat-tab>
+        <ng-template mat-tab-label>
+            Input Form
+        </ng-template>
+        <!-- Adding a  component and its input fields can be changed -->
+        <app-input-page></app-input-page>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            Tables
+        </ng-template>
+        Content 2
+        <app-tables [header]=header [headerTitle]=headerTitle [tableData]=ELEMENT_DATA></app-tables>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            Input Form Manual
+        </ng-template>
+        <!-- Manual Typing of the input fields -->
+        <mat-card>
+
+            <form class="example-form">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Company (disabled)</mat-label>
+                    <input matInput disabled value="Google">
+                </mat-form-field>
+
+                <table class="example-full-width" cellspacing="0">
+                    <tr>
+                        <td>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>First name</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </td>
+                        <td>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>Long Last Name That Will Be Truncated</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                </table>
+
+                <p>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Address</mat-label>
+                        <textarea matInput placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Address 2</mat-label>
+                        <textarea matInput></textarea>
+                    </mat-form-field>
+                </p>
+
+                <table class="example-full-width" cellspacing="0">
+                    <tr>
+                        <td>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>City</mat-label>
+                                <input matInput placeholder="Ex. San Francisco">
+                            </mat-form-field>
+                        </td>
+                        <td>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>State</mat-label>
+                                <input matInput placeholder="Ex. California">
+                            </mat-form-field>
+                        </td>
+                        <td>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>Postal Code</mat-label>
+                                <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043">
+                                <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </mat-card>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            Charts
+        </ng-template>
+        <app-pie-chart [pieData]='pieData'></app-pie-chart>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            Accordion
+        </ng-template>
+        Content 2
+        <app-accordion></app-accordion>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            Stepper
+        </ng-template>
+        Content 2
+        <app-stepper></app-stepper>
+    </mat-tab>
+
+</mat-tab-group>
+<!-- <mat-tab-group>
+        <mat-tab label="First">
+            <ng-template matTabContent>
+                Content 1 - Loaded: {{getTimeLoaded(1) | date:'medium'}}
+            </ng-template>
+        </mat-tab>
+            <mat-tab label="Second">
+                <ng-template matTabContent>
+                    Content 2 - Loaded: {{getTimeLoaded(2) | date:'medium'}}
+                </ng-template>
+            </mat-tab>
+            <mat-tab label="Third">
+                <ng-template matTabContent>
+                    Content 3 - Loaded: {{getTimeLoaded(3) | date:'medium'}}
+                </ng-template>
+            </mat-tab>
+        </mat-tab-group> -->
+
+
+<!-- <mat-drawer-content class="content">Main content<p>requisition-page works!</p>
+    </mat-drawer-content> -->
